@@ -15,15 +15,15 @@ In Android Studio in the project files, go to `Gradle Scripts/build.common.gradl
 It should look something like this (I also included the entire file in this repo so you can check it fully. The `multiDexEnabled true` was added at line 56):  
 ```gradle
 android {
-    ...
+    // ...
     defaultConfig {
         signingConfig signingConfigs.debug
         applicationId 'com.qualcomm.ftcrobotcontroller'
         minSdkVersion 24
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
-        multiDexEnabled true
-        ...
+        multiDexEnabled true // Add this line
+        // ...
     }
 }
 ```
@@ -62,9 +62,9 @@ You should be able to use the Dashboard, CachingHardware and FTCLib from now on!
 Here are some simple examples of code that should build without errors on your new setup:  
 Dashboard:  
 ```java
-...
+// ...
 import com.acmerobotics.dashboard.config.Config;
-...
+// ...
 
 @Config
 @TeleOp(name = "Test")
@@ -90,9 +90,9 @@ public class LinearOpMode extends com.qualcomm.robotcore.eventloop.opmode.Linear
 ```  
 CachingHardware:  
 ```java
-...
+// ...
 import dev.frozenmilk.dairy.cachinghardware.CachingDcMotorEx;
-...
+// ...
 
 public class Arm {
     private CachingDcMotorEx motor;
@@ -106,9 +106,9 @@ public class Arm {
 ```  
 FTCLib (PIDController for example):  
 ```java
-...
+// ...
 import com.arcrobotics.ftclib.controller.PIDController;
-...
+// ...
 
 public class Control {
     private PIDController pid;
