@@ -125,7 +125,7 @@ public class Control {
   
 ## If you're interested
 
-For FSM programming in autonomous, I use a State Machine manager that I coded myself, which you can find more about in [the original repository](https://github.com/noobOriginals/Statement)!  
+For more advanced FSM programming in autonomous, I'm testing out a State Machine manager that I coded myself, which you can find more about in [the original repository](https://github.com/noobOriginals/Statement)!  
 To use it in your project, follow these steps:  
 In Android Studio in the project files, go to `Team Code/java/org.firstinspires.ftc.teamcode/` and create a package named `util`. In that package, create a new file `StateMachine.java` and copy paste the code from the [Statement Repository](https://github.com/noobOriginals/Statement) found in `Statement/src/app/core/StateMachine.java` into your newly created file. Lastly, in your newly created file, change the package from `app.core` to `org.firstinspires.ftc.teamcode.util`. So just replace the line:  
 ```java
@@ -135,5 +135,6 @@ with:
 ```java
 package org.firstinspires.ftc.teamcode.util;
 ```  
+It's not fully tested yet (so I can't call it completely finished), that's why I don't suggest using it unless you want to learn something new or you really know what you're doing and you plan on modifying some of the code yourself. Either way, I really think it's a cool little concept and I hope it helps some people out there!  
 In the future I plan on uploading that project to gradle repositories, so the setup process should change.  
 ### But, for now, this is it! Thank you!
